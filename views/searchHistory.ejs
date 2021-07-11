@@ -1,0 +1,68 @@
+<%- include ('./partials/header.ejs'); -%>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg  sticky-top navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Medium Crawler</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenus" aria-controls="navbarMenus" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenus">
+            <div class="navbar-nav">
+                <a class="nav-link active"  href="/dashboard">Dashboard</a>
+                <a class="nav-link active" href="/searchHistory" aria-current="page">Search History</a>
+                <a class="nav-link active" href="/login">Login</a>
+                <a class="nav-link active" href="/signup">Signup</a>
+            </div>
+            </div>
+        </div>
+    </nav>
+    <br>
+    
+    <div class="container">
+        <%if(result){%>
+        <h5>Search history of articles data of some searched tags</h5>
+            <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                <th scope="col">Post Author</th>
+                <th scope="col">Title</th>
+                <th scope="col">Responses</th>
+                <th scope="col">Date</th>
+                <th scope="col">Link</th>
+                <th scope="col">Reading Time</th>
+                </tr>
+            </thead>
+            <tbody>
+            <%result.forEach(function(data){%>
+                <tr>
+                    <th><%=data.postAuthor%></th>
+                    <td><%=data.postTitle%></td>
+                    <td><%=data.postResponses%></td>
+                    <td><%=data.postDate%></td>
+                    <td><a href=`<%=data.postLink%>` target="_blank">Link</a></td>
+                    <td><%=data.postReadingTime%></td>
+                </tr>
+            <%})%>
+            
+        </tbody>
+    </table>
+        <%}%>
+        
+    </div>
+    <%if(results){%>
+        <div class="container">
+        <h5>Related Tags of some searched TAGS :- </h5>
+        <ul>
+            <%results.forEach(function(tags){%>
+                <li><%=tags.relatedTagName%></li>
+            <%})%>
+        </ul>
+    </div>
+    <%}%>
+    
+    <br>
+    <h4>Go Back to dashboard and Search for some articles <a href="/dashboard">Dashboard</a></h4>
+    <br>
+</body>
+</html>
