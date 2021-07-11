@@ -1,3 +1,74 @@
-.container{
-    background-color:#B5EAEA;
+
+body {
+    background-color: #adb3bc;
+}
+h3 {
+	color: #6e88aa;
+	text-align: center;
+}
+h4 {
+	color: #6e88aa;
+	text-align: center;
+}
+
+.login-credentials{
+	padding: 60px;
+    margin: 10px;
+    background-color: #6e88aa;
+}
+
+.col-form-label {
+	color: #0112ff;
+	font-weight: bold;
+}
+.fullname {
+	color: #0112ff;
+	font-weight: 600;
+	border: 2px solid #0112ff;
+}
+.fullname::placeholder {
+	color: #0112ff;
+	opacity: 0.7;
+	font-weight: 600;
+}
+.username {
+	color: #0112ff;
+	font-weight: 600;
+	border: 2px solid #0112ff;
+}
+.username::placeholder {
+	color: #0112ff;
+	opacity: 0.7;
+	font-weight: 600;
+}
+.password {
+	border: 2px solid #0112ff;
+}
+.password::placeholder {
+	color: #0112ff;
+	opacity: 0.7;
+	font-weight: 600;
+}
+.loginBtn {
+	background-color: #ff8201;
+	color: #ffffff;
+	font-weight: bold;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.createAccount {
+	background-color: #ffffff;
+
+	font-weight: bold;
+	border: 3px solid #ff8201;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.createAccount a {
+	text-decoration: none;
+	color: #222e3e;
+}
+
+hr {
+	border-top: 1px solid #8c8b8b;
 }

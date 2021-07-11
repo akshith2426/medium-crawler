@@ -19,19 +19,35 @@
     </nav>
     <div class="container">
         <div class="jumbotron">
-            <form method="POST" action="/login">
-                <div class="form-group w-95 align-center">
-                    <label class="col-form-label col-form-label-lg">Username</label>
-                    <input type="text" class="form-control username" name="username" placeholder="Enter Username">
-                </div>
-                <div class="form-group w-95">
-                    <label class="col-form-label col-form-label-lg ">Password</label>
-                    <input type="password" class="form-control password" name="password" placeholder="Enter Password">
-                </div>                
-                <div class="text-center">
-                    <button type="submit" class="btn btn-lg btn-warning">Login</button>
-                </div>
-            </form>
+            
         </div>
     </div>
+    <div class="container">
+    <div class="row">
+        <div class="col-12 ">
+            <div class="login-credentials form-group ">
+                <form method="POST" action="/login">
+                    <div class="form-group w-75 align-center">
+                        <label class="col-form-label col-form-label-lg">Username</label>
+                        <input type="text" class="form-control username" name="username" placeholder="Enter Username">
+                    </div>
+                    <div class="form-group w-75">
+                        <label class="col-form-label col-form-label-lg ">Password</label>
+                        <input type="password" class="form-control password" name="password" placeholder="Enter Password">
+                    </div>  
+                    <br>              
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-lg loginBtn">Login</button>
+                    </div>
+                </form>    
+                <hr>
+                <div class="form-group">
+                    <p>Don't have an account ?</p>
+                    <button type="submit" class="btn btn-sm createAccount"><a href="/signup">Create New Account</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <%- include ('./partials/footer.ejs'); -%>

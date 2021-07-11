@@ -1,4 +1,5 @@
 <%- include ('./partials/header.ejs'); -%>
+<link rel="stylesheet" href="/stylesheets/indexPage.css" />
 </head>
 <body>
     <nav class="navbar navbar-expand-lg  sticky-top navbar-dark bg-primary">
@@ -17,39 +18,9 @@
         </div>
     </nav>
     <div class="container">
-        <h3>Greetings Welcome to Medium Crawler</h3>
-        <h5>Search for Artciles using Tags</h5>
-        <form method="POST" id="searchForm">
-            <div class="form-group">
-                <input type="text" class="form-control searchQuery" placeholder="Enter a Tag">
-            </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </form>
-        <br>
-        <br>
-        <h4>Trending Articles</h4>
+        <h4>Greetings Welcome to Medium Crawler</h4>
+        <h5>Please Log In to check the crawling articles</h5>
+        <button type="button" class="btn btn-sm btn-primary"><a href="/login" class="loginBtn">SIGN IN</a></button>
+        <button type="button" class="btn btn-sm btn-primary"><a href="/signup" class="loginBtn">SIGN UP</a></button>
     </div>
-<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>    
-<script type="text/javascript">
 
-    $('#searchForm').submit(function(e){  
-        e.preventDefault();
-        $.ajax({ 
-            url: '/search',
-            type: 'POST',
-            cache: false, 
-            data: { searchField:$('.searchQuery').val() }, 
-            success: function(data) {
-                    console.log(data);
-                    console.log('process sucess');
-            },
-            error: function() {
-                    console.log('process error');
-            }
-        })
-    });            
-
-</script>
-<%- include ('./partials/footer.ejs'); -%>

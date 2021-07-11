@@ -1,0 +1,11 @@
+body {
+    background-color: #adb3bc;
+}
+.loginBtn{
+    text-decoration: none;
+    color:#fff;
+}
+.loginBtn:hover{
+    text-decoration: none;
+    color:#fff;
+}
